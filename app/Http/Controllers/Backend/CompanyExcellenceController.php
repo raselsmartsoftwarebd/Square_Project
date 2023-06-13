@@ -116,6 +116,8 @@ class CompanyExcellenceController extends Controller
         return redirect()->to('/companyexcellence')->with('success','Deleted');
     }
 
+
+    //status change
     function excellenceStatusChange(Request $request){
         $slider_id = $request->input("ID");
         $slider_status = CompanyExcellence::where("id", "=", $slider_id )->first()->status;

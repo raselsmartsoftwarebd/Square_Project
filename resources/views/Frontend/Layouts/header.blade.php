@@ -19,7 +19,7 @@
                                 <a class="nav-link " aria-current="page" href="{{ url('/') }}">HOME</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link " aria-current="page" href="{{ url('/about') }}">ABOUT</a>
+                                <a class="nav-link " aria-current="page" href="{{ url('/about/section') }}">ABOUT</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/business') }}">BUSINESS</a>

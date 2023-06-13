@@ -12,6 +12,14 @@ use App\Http\Controllers\Backend\SlidersController;
 use App\Http\Controllers\Backend\CompanyExcellenceController;
 use App\Http\Controllers\Backend\JourneyController;
 use App\Http\Controllers\Backend\CompanyGlobalController;
+use App\Http\Controllers\Backend\CompanyTeamController;
+use App\Http\Controllers\Backend\NewsEventsController;
+use App\Http\Controllers\Backend\AboutController;
+use App\Http\Controllers\Backend\AboutDetailsController;
+use App\Http\Controllers\Backend\BusinessTitleController;
+use App\Http\Controllers\Backend\BusinessDetailsController;
+use App\Http\Controllers\Backend\InvestorTitleController;
+use App\Http\Controllers\Backend\InvestorDetailsController;
 
 
 /*
@@ -31,7 +39,7 @@ use App\Http\Controllers\Backend\CompanyGlobalController;
 Route::get('/', [HomeController::class, 'index']);
 
 //FrontendController Routes For All pages Routes
-Route::get('/about', [FrontendController::class, 'about']);
+Route::get('/about/section', [FrontendController::class, 'about']);
 Route::get('/business', [FrontendController::class, 'business']);
 
 Route::get('/safety', [FrontendController::class, 'safety']);
@@ -70,6 +78,45 @@ Route::post('/journey_status', [JourneyController::class, 'journeyStatusChange']
 //CompanyGlobal Routes
 Route::resource('companyglobal', CompanyGlobalController::class);
 Route::post('/change_global_status', [CompanyGlobalController::class, 'globalStatusChange']);
+
+//CompanyTeamRoutes
+Route::resource('companyteam', CompanyTeamController::class);
+Route::resource('companyteam/1/edit', CompanyTeamController::class);
+
+
+//NewsEvents Routes
+Route::resource('newsevents', NewsEventsController::class);
+Route::post('/change_events_status', [NewsEventsController::class, 'eventsStatusChange']);
+
+//AboutTitle
+Route::resource('about', AboutController::class);
+Route::get('about/aboutedit/{id}', [AboutController::class, 'aboutedit']); //for edit, id sidebar theke /1 diye dhorano
+
+//AboutDetails
+Route::resource('aboutdetails', AboutDetailsController::class);
+Route::post('/change_about_details_status', [AboutDetailsController::class, 'statusChange']);
+
+//BusinessTite
+Route::resource('businesstitle', BusinessTitleController::class);
+Route::get('businesstitle/titleedit/{id}', [BusinessTitleController::class, 'titleedit']);
+
+//AboutDetails
+Route::resource('businessdetails', BusinessDetailsController::class);
+Route::post('/change_business_details_status', [BusinessDetailsController::class, 'statusChange']);
+
+//InvestorTite
+Route::resource('investortitle',InvestorTitleController::class);
+Route::get('investortitle/titleedit/{id}', [InvestorTitleController::class, 'titleedit']);
+
+
+//InvestorDetails
+Route::resource('investordetails', InvestorDetailsController::class);
+Route::post('/change_investor_details_status', [InvestorDetailsController::class, 'statusChange']);
+
+
+
+
+
 
 
 

@@ -21,6 +21,14 @@ class DatabaseSeeder extends Seeder
             CompanyExcellenceSeeder::class,
             JourneySeeder::class,
             CompanyGlobalSeeder::class,
+            CompanyTeamSeeder::class,
+            NewsEventsSeeder::class,
+            AboutSeeder::class,
+            AboutDetailsSeeder::class,
+            BusinessTitleSeeder::class,
+            BusinessDetailsSeeder::class,
+            InvestorTitleSeeder::class,
+            InvestorDetailsSeeder::class,
         ]);
     }
 }
