@@ -29,6 +29,8 @@ class DatabaseSeeder extends Seeder
             BusinessDetailsSeeder::class,
             InvestorTitleSeeder::class,
             InvestorDetailsSeeder::class,
+            GalleryTitleSeeder::class,
+            GalleryDetailsSeeder::class,
         ]);
     }
 }

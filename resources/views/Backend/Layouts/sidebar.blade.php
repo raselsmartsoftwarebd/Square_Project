@@ -11,7 +11,7 @@
 
     <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-desktop"></i>
+            <i class="menu-icon fa fa-cogs"></i>
             <span class="menu-text">
                 Company Settings
             </span>
@@ -27,7 +27,31 @@
                 <a href="{{ url('/company/1/edit') }}" class="">
                     <i class="menu-icon fa fa-caret-right"></i>
 
-                    Company Edit
+                    Site Configuration
+
+                </a>
+
+             </li>
+        </ul>
+
+        <ul class="submenu">
+            <li class="">
+                <a href="{{ url('/company/1/edit') }}" class="">
+                    <i class="menu-icon fa fa-caret-right"></i>
+
+                    Company List
+
+                </a>
+
+             </li>
+        </ul>
+
+        <ul class="submenu">
+            <li class="">
+                <a href="{{ url('/company/1/edit') }}" class="">
+                    <i class="menu-icon fa fa-caret-right"></i>
+
+                    Company Category List
 
                 </a>
 
@@ -43,9 +67,9 @@
 
     <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-desktop"></i>
+            <i class="menu-icon fa fa-home"></i>
             <span class="menu-text">
-                Home Settings
+                Home
             </span>
 
             <b class="arrow fa fa-angle-down"></b>
@@ -137,9 +161,9 @@
 
     <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-desktop"></i>
+            <i class="menu-icon fa fa-book"></i>
             <span class="menu-text">
-                About Settings
+                About
             </span>
 
             <b class="arrow fa fa-angle-down"></b>
@@ -180,9 +204,9 @@
 
     <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-desktop"></i>
+            <i class="menu-icon fa fa-briefcase"></i>
             <span class="menu-text">
-                Business Settings
+                Business
             </span>
 
             <b class="arrow fa fa-angle-down"></b>
@@ -223,9 +247,9 @@
 
      <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-desktop"></i>
+            <i class="menu-icon fa fa-users"></i>
             <span class="menu-text">
-                Investor Settings
+                Investor
             </span>
 
             <b class="arrow fa fa-angle-down"></b>
@@ -259,6 +283,51 @@
         </ul>
 
     </li>
+
+
+    <!-- Gallery Section -->
+
+
+    <li class="">
+        <a href="#" class="dropdown-toggle">
+            <i class="menu-icon glyphicon glyphicon-picture"></i>
+            <span class="menu-text">
+                Gallery
+            </span>
+
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+
+        <b class="arrow"></b>
+
+
+        <ul class="submenu">
+            <li class="">
+                <a href="{{ url('/gallerytitle/titleedit/1') }}" class="">
+                    <i class="menu-icon fa fa-caret-right"></i>
+
+                    Gallery Title
+
+                </a>
+
+             </li>
+        </ul>
+
+        <ul class="submenu">
+            <li class="">
+                <a href="{{ url('gallerydetails') }}" class="">
+                    <i class="menu-icon fa fa-caret-right"></i>
+
+                   Gallery Details
+
+                </a>
+
+             </li>
+        </ul>
+
+    </li>
+
+
 
 
 

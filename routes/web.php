@@ -20,6 +20,8 @@ use App\Http\Controllers\Backend\BusinessTitleController;
 use App\Http\Controllers\Backend\BusinessDetailsController;
 use App\Http\Controllers\Backend\InvestorTitleController;
 use App\Http\Controllers\Backend\InvestorDetailsController;
+use App\Http\Controllers\Backend\GalleryTitleController;
+use App\Http\Controllers\Backend\GalleryDetailsController;
 
 
 /*
@@ -112,6 +114,15 @@ Route::get('investortitle/titleedit/{id}', [InvestorTitleController::class, 'tit
 //InvestorDetails
 Route::resource('investordetails', InvestorDetailsController::class);
 Route::post('/change_investor_details_status', [InvestorDetailsController::class, 'statusChange']);
+
+
+//NewsMediaTitle
+Route::resource('gallerytitle',GalleryTitleController::class);
+Route::get('gallerytitle/titleedit/{id}', [GalleryTitleController::class, 'titleedit']);
+
+//GalleryDetails
+Route::resource('gallerydetails', GalleryDetailsController::class);
+Route::post('/change_gallery_details_status', [GalleryDetailsController::class, 'statusChange']);
 
 
 

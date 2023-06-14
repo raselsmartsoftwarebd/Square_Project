@@ -9,6 +9,6 @@ class AdminController extends Controller
 {
     public function index()
     {
-        return view('Backend.Layouts.app');
+        return view('Backend.Home.index');
     }
 }
