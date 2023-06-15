@@ -25,35 +25,35 @@
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt blue"></i> &nbsp; </h2>
-                    <strong class="text-center">30 Products</strong>
+                    <strong class="text-center">10 Subcategory</strong>
                 </div>
             </div>
 
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt red"></i> &nbsp; </h2>
-                    <strong class="text-center">1 Brands</strong>
+                    <strong class="text-center">10 Brands</strong>
                 </div>
             </div>
 
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt orange"></i> &nbsp; </h2>
-                    <strong class="text-center">8 Clients</strong>
+                    <strong class="text-center">10 Events</strong>
                 </div>
             </div>
 
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt purple"></i> &nbsp; </h2>
-                    <strong class="text-center">1 Sister Concern</strong>
+                    <strong class="text-center">10 Reviews</strong>
                 </div>
             </div>
 
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt pink"></i> &nbsp;</h2>
-                    <strong class="text-center">0 News</strong>
+                    <strong class="text-center">5 News</strong>
                 </div>
             </div>
             <br>

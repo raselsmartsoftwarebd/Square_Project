@@ -36,7 +36,7 @@
 
         <ul class="submenu">
             <li class="">
-                <a href="{{ url('/company/1/edit') }}" class="">
+                <a href="{{ URL::to('companylist') }}" class="">
                     <i class="menu-icon fa fa-caret-right"></i>
 
                     Company List
@@ -48,10 +48,10 @@
 
         <ul class="submenu">
             <li class="">
-                <a href="{{ url('/company/1/edit') }}" class="">
+                <a href="{{ URL::to('companycategory') }}" class="">
                     <i class="menu-icon fa fa-caret-right"></i>
 
-                    Company Category List
+                    Company Category
 
                 </a>
 

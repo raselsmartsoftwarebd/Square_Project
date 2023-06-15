@@ -8,6 +8,8 @@ use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\CompanyinfoController;
+use App\Http\Controllers\Backend\CompanyListController;
+use App\Http\Controllers\Backend\CompanyCategoryController;
 use App\Http\Controllers\Backend\SlidersController;
 use App\Http\Controllers\Backend\CompanyExcellenceController;
 use App\Http\Controllers\Backend\JourneyController;
@@ -63,6 +65,12 @@ Route::get('/admin/dashboard', [AdminController::class, 'index']);
 
 //Companyinfo Controller
 Route::resource('company', CompanyinfoController::class);
+
+//CompanyList Controller
+Route::resource('companylist', CompanyListController::class);
+
+//CompanyCategory Controller
+Route::resource('companycategory', CompanyCategoryController::class);
 
 //SliderController Routes
 Route::resource('sliders', SlidersController::class);
