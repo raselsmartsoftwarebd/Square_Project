@@ -70,7 +70,9 @@ class CompanyCategoryController extends Controller
      */
     public function edit($id)
     {
-
+        $companycategory = CompanyCategory::findOrFail($id);
+        $companies = CompanyList::get();
+        return view('Backend.CompanyCategory.edit', compact('companycategory', 'companies'));
     }
 
     /**
@@ -82,17 +84,12 @@ class CompanyCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
-
-        $companycategory = CompanyCategory::with('company_list')->find($id);
-        $companycategory->name = $request->name;
+        $companycategory = CompanyCategory::findOrFail($id);
         $companycategory->company_list_id = $request->company_list_id;
-
-
-
+        $companycategory->name = $request->name;
         $companycategory->save();
-        return redirect()->to('/companycategory')->with('success','Update Successfull');
+        return redirect()->to('/companycategory')->with('success', 'Updated');
+
     }
 
     /**
@@ -103,6 +100,8 @@ class CompanyCategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $companycategory = CompanyCategory::findOrFail($id);
+        $companycategory->delete();
+        return redirect()->to('/companycategory')->with('success', 'Deleted');
     }
 }
