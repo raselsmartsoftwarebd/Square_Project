@@ -30,8 +30,6 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                   <li><a class="dropdown-item" href="{{ url('/safety') }}">SAFETY</a></li>
-                                  <li><a class="dropdown-item" href="{{ url('/environment') }}">ENVIRONMENT</a></li>
-                                  <li><a class="dropdown-item" href="{{ url('/employee') }}">EMPLOYEE WELLBEING</a></li>
                                   <li><a class="dropdown-item" href="{{ url('/community') }}">COMMUNITY</a></li>
                                 </ul>
                               </li>

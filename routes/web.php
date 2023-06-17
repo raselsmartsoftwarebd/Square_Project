@@ -23,6 +23,7 @@ use App\Http\Controllers\Backend\SafetyTitleController;
 use App\Http\Controllers\Backend\SafetyDetailsController;
 use App\Http\Controllers\Backend\SafetyImageController;
 use App\Http\Controllers\Backend\CommunityTitleController;
+use App\Http\Controllers\Backend\CommunityDetailsController;
 use App\Http\Controllers\Backend\BusinessDetailsController;
 use App\Http\Controllers\Backend\InvestorTitleController;
 use App\Http\Controllers\Backend\InvestorDetailsController;
@@ -130,6 +131,10 @@ Route::get('safetyimage/imageedit/{id}', [SafetyImageController::class, 'imageed
 //Responsibility CommunityTitle
 Route::resource('communitytitle', CommunityTitleController::class);
 Route::get('communitytitle/titleedit/{id}', [SafetyTitleController::class, 'titleedit']);
+
+//Responsibility CommunityDetails
+Route::resource('communitydetails', CommunityDetailsController::class);
+Route::get('communitydetails/detailsedit/{id}', [CommunityDetailsController::class, 'detailsedit']);
 
 
 //AboutDetails

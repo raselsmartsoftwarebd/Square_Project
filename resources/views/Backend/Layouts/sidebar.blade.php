@@ -340,7 +340,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="{{ url('businessdetails') }}" class="">
+                        <a href="{{ url('/communitydetails/detailsedit/1') }}" class="">
                             <i class="menu-icon fa fa-caret-right"></i>
 
                             Details
