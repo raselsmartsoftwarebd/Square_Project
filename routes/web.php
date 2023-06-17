@@ -20,6 +20,7 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\AboutDetailsController;
 use App\Http\Controllers\Backend\BusinessTitleController;
 use App\Http\Controllers\Backend\SafetyTitleController;
+use App\Http\Controllers\Backend\SafetyDetailsController;
 use App\Http\Controllers\Backend\BusinessDetailsController;
 use App\Http\Controllers\Backend\InvestorTitleController;
 use App\Http\Controllers\Backend\InvestorDetailsController;
@@ -115,6 +116,10 @@ Route::get('businesstitle/titleedit/{id}', [BusinessTitleController::class, 'tit
 //Responsibility SafetyTitle
 Route::resource('safetytitle', SafetyTitleController::class);
 Route::get('safetytitle/titleedit/{id}', [SafetyTitleController::class, 'titleedit']);
+
+//Responsibility SafetyDetails
+Route::resource('safetydetails', SafetyDetailsController::class);
+Route::get('safetydetails/detailsedit/{id}', [SafetyDetailsController::class, 'detailsedit']);
 
 //AboutDetails
 Route::resource('businessdetails', BusinessDetailsController::class);
