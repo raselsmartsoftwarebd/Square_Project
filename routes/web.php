@@ -21,6 +21,7 @@ use App\Http\Controllers\Backend\AboutDetailsController;
 use App\Http\Controllers\Backend\BusinessTitleController;
 use App\Http\Controllers\Backend\SafetyTitleController;
 use App\Http\Controllers\Backend\SafetyDetailsController;
+use App\Http\Controllers\Backend\SafetyImageController;
 use App\Http\Controllers\Backend\BusinessDetailsController;
 use App\Http\Controllers\Backend\InvestorTitleController;
 use App\Http\Controllers\Backend\InvestorDetailsController;
@@ -120,6 +121,10 @@ Route::get('safetytitle/titleedit/{id}', [SafetyTitleController::class, 'titleed
 //Responsibility SafetyDetails
 Route::resource('safetydetails', SafetyDetailsController::class);
 Route::get('safetydetails/detailsedit/{id}', [SafetyDetailsController::class, 'detailsedit']);
+
+//Responsibility SafetyImage
+Route::resource('safetyimage', SafetyImageController::class);
+Route::get('safetyimage/imageedit/{id}', [SafetyImageController::class, 'imageedit']);
 
 //AboutDetails
 Route::resource('businessdetails', BusinessDetailsController::class);

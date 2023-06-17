@@ -298,7 +298,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="{{ url('businessdetails') }}" class="">
+                        <a href="{{ url('/safetyimage/imageedit/1') }}" class="">
                             <i class="menu-icon fa fa-caret-right"></i>
 
                             Image

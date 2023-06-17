@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             ContactusSeeder::class,
             SafetyTitleSeeder::class,
             SafetyDetailsSeeder::class,
+            SafetyImageSeeder::class,
         ]);
     }
 }
