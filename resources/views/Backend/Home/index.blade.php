@@ -18,14 +18,14 @@
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt green"></i> &nbsp;</h2>
-                    <strong class="text-center">6 Category</strong>
+                    <strong class="text-center">10 Company</strong>
                 </div>
             </div>
 
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt blue"></i> &nbsp; </h2>
-                    <strong class="text-center">10 Subcategory</strong>
+                    <strong class="text-center">10 Sub-Company</strong>
                 </div>
             </div>
 
@@ -46,14 +46,14 @@
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt purple"></i> &nbsp; </h2>
-                    <strong class="text-center">10 Reviews</strong>
+                    <strong class="text-center">10 News</strong>
                 </div>
             </div>
 
             <div class="col-sm-2">
                 <div class="well well-lg">
                     <h2><i class="fa fa-list-alt pink"></i> &nbsp;</h2>
-                    <strong class="text-center">5 News</strong>
+                    <strong class="text-center">10 Contacts</strong>
                 </div>
             </div>
             <br>

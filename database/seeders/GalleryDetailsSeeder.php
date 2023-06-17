@@ -17,7 +17,7 @@ class GalleryDetailsSeeder extends Seeder
     {
         $gallerydetails = new GalleryDetails();
         $gallerydetails->description = 'Example Description';
-        $investordetails->image = 'Example Image';
+        $gallerydetails->image = 'Example Image';
         $gallerydetails->status = '1';
 
         $gallerydetails->save();

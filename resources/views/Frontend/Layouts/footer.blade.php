@@ -59,7 +59,7 @@
 
     <!....Small Footer....>
 
-<div class="container-fluid">
+<div class="">
     <div class="row">
       <div class="col-md-12" style="background: black;">
         <div class="bodyy">
@@ -75,3 +75,4 @@
       </div>
     </div>
   </div>
+</div>

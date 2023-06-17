@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('company_excellences', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description');
             $table->string('image')->nullable();
             $table->tinyinteger('status')->default(1)->nullable();
             $table->timestamps();

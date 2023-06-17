@@ -4,23 +4,15 @@
 
         <div class="slideshow-container">
 
+          @foreach ($sliders as $sli)
           <div class="mySlides fade">
 
-            <img class="sliding-image" src="{{ asset('/frontend/asset/') }}/images/hospital.jpg" style="width:100%;height:500px;">
-            <div class="text">SQUARE is a family brand built with quality & trust</div>
+            <img class="sliding-image" src="{{ asset('/slidesimage/'.$sli->slidingimage) }}" style="width:100%;height:500px;">
+            <div class="text">{{ $sli->imagetitle }}</div>
           </div>
+          @endforeach
 
-          <div class="mySlides fade">
 
-            <img class="sliding-image" src="{{ asset('/frontend/asset/') }}/images/owner.jpg" style="width:100%;height:500px;">
-            <div class="text">Smason H Chowdhury founded SQUARE from a small partnership firm In 1958</div>
-          </div>
-
-          <div class="mySlides fade">
-
-            <img class="sliding-image" src="{{ asset('/frontend/asset/') }}/images/morewindows.jpg" style="width:100%;height:500px;">
-            <div class="text">Square hold the leading presence in Healthcare, Food & Beverage</div>
-          </div>
 
           </div>
           <br>

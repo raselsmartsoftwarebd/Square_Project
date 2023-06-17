@@ -16,12 +16,14 @@
 
                     </div>
                     <div class="col-md-8">
-                       <div class="total-parsuit-heading">
-                        <h2 class="parsuit-heading">Pursuit of Excellence</h2>
+                      @foreach($companyexcellence as $excellence)
+                      <div class="total-parsuit-heading">
+                        <h2 class="parsuit-heading">{{ $excellence->title }}</h2>
                         </div>
 
-                    <div  class="windows-text"><p>The philosophy deeply ingrained in entrepreneurial DNA has been incorporated in design thinking of all the business operations. SQUARE has achieved many recognitions of national and international importance for its stringent compliance to regulatory guidelines, quality and best practices.</p></div>
+                     <div  class="windows-text"><p>{{ $excellence->description }}</p></div>
 
+                      @endforeach
 
                     </div>
                 </div>
@@ -29,7 +31,9 @@
             </div>
 
             <div class="col-md-6">
-                <div class="parsuit-image"><img src="{{ asset('/frontend/asset/') }}/images/field.jpg" style="height:420px;width:600px;margin-top: -40px;" alt="green line"></div>
+                @foreach($companyexcellence as $excellence)
+                <div class="parsuit-image"><img src="{{ asset('/asset/excellenceimage/'.$excellence->image) }}" style="height:420px;width:600px;margin-top: -40px;" alt="green line"></div>
+                @endforeach
             </div>
 
         </div>

@@ -20,6 +20,6 @@ class CompanyCategorySeeder extends Seeder
         $companycategory->name = 'Example Name';
         $companycategory->company_list_id = '1';
 
-        $companylist->save();
+        $companycategory->save();
     }
 }

@@ -11,8 +11,6 @@
   <!....Started Journey Mission Vision....>
   @include('Frontend.Home.Layouts.mission')
 
-  <!....Single Image....>
-   @include('Frontend.Home.Layouts.singlepic')
 
   <!....count....>
   @include('Frontend.Home.Layouts.count');

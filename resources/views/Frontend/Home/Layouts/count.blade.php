@@ -2,7 +2,11 @@
 
     <div class="row">
 
-      <div class="col-md-12 cover-image mt-5">
+      <div class="col-md-12 mt-5">
+        @foreach ($companyglobal as $comglobal)
+        <div class="cover-image" style="background-image: url('{{ asset('/asset/globalimage/'.$comglobal->image) }}');">
+        @endforeach
+
         <div>
           <h1 class="global-heading" >Global Reach</h1>
          </div>
@@ -20,3 +24,4 @@
     </div>
 
   </div>
+</div>

@@ -19,6 +19,6 @@ class InvestorTitleSeeder extends Seeder
 
         $investortitle->title = 'Example Title';
         $investortitle->image = 'Example Image';
-        $businesstitle->save();
+        $investortitle->save();
     }
 }

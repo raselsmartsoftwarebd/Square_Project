@@ -247,7 +247,7 @@
 
     <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-briefcase"></i>
+            <i class="menu-icon fa fa-heart"></i>
             <span class="menu-text">
                 Responsibility
             </span>
@@ -450,7 +450,7 @@
 
     <li class="">
         <a href="#" class="dropdown-toggle">
-            <i class="menu-icon glyphicon glyphicon-picture"></i>
+            <i class="menu-icon fa fa-envelope"></i>
             <span class="menu-text">
                 Contact
             </span>
