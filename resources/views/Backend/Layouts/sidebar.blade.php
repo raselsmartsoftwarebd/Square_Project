@@ -328,7 +328,7 @@
 
                 <ul class="submenu">
                     <li class="">
-                        <a href="{{ url('/businesstitle/titleedit/1') }}" class="">
+                        <a href="{{ url('/communitytitle/titleedit/1') }}" class="">
                             <i class="menu-icon fa fa-caret-right"></i>
 
                             Title

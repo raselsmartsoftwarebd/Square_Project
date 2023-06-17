@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\CommunityTitle;
 
 class CommunityTitleSeeder extends Seeder
 {
@@ -14,6 +15,11 @@ class CommunityTitleSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $communitytitle = new CommunityTitle();
+
+        $communitytitle->title = 'Example Title';
+        $communitytitle->description = 'Example Description';
+        $communitytitle->image = 'Example Image';
+        $communitytitle->save();
     }
 }
