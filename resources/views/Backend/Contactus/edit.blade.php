@@ -8,7 +8,7 @@
     <div class="col-sm-12">
         <div class="widget-box">
             <div class="widget-header">
-                <h4 class="widget-title"> Investor Details Update</h4>
+                <h4 class="widget-title">Investor Title Update</h4>
                 <span class="widget-toolbar">
                 </span>
             </div>
@@ -29,7 +29,7 @@
 
 
 
-                    <form class="form-horizontal" id="companyForm" action="{{ url('investordetails/'.$investordetails->id) }}" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" id="companyForm" action="{{ url('contactus/'.$contactus->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
 
@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-sm-12">
 
-                                <h4 class="text-center">Investor Details Update</h4>
+                                <h4 class="text-center">Contact Info Update</h4>
                                 <hr>
 
 
@@ -49,18 +49,18 @@
                                     </div>
                                     <div class="col-xs-12 col-sm-2">
                                         <div class="favicon-upload-box">
-                                            <img src="{{ asset('/asset/investorimage/'.$investordetails->image)  }}"  height="100" width="100" />
+                                            <img src="{{ asset('/asset/contactimage/'.$contactus->image)  }}"  height="100" width="100" />
                                         </div>
                                      </div>
 
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="form-field-1-1">Title </label>
+                                    <label class="col-sm-3 control-label" for="form-field-1-1">Heading Title </label>
 
                                     <div class="col-xs-12 col-sm-8 ">
                                         <input type="text" class="form-control" name="title"
-                                               value="{{ $investordetails->title }}" placeholder="">
+                                               value="{{ $contactus->title }}" placeholder="">
 
 
                                         <span class="text-danger">
@@ -71,11 +71,11 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="form-field-1-1">Description </label>
+                                    <label class="col-sm-3 control-label" for="form-field-1-1">Sub-Title </label>
 
                                     <div class="col-xs-12 col-sm-8 ">
-                                        <input type="text" class="form-control" name="description"
-                                               value="{{ $investordetails->description }}" placeholder="">
+                                        <input type="text" class="form-control" name="subtitle"
+                                               value="{{ $contactus->subtitle }}" placeholder="">
 
 
                                         <span class="text-danger">
@@ -84,6 +84,25 @@
 
                                     </div>
                                 </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="form-field-1-1">Heading Title </label>
+
+                                    <div class="col-xs-12 col-sm-8 ">
+                                        <input type="text" class="form-control" name="description"
+                                               value="{{ $contactus->description }}" placeholder="">
+
+
+                                        <span class="text-danger">
+
+                                            </span>
+
+                                    </div>
+                                </div>
+
+
+
+
 
 
 
@@ -95,6 +114,7 @@
 
                         </div>
                         <br>
+
 
                         <div class="form-actions center" style="text-align: right !important;">
                             <button type="submit" class="btn btn-sm btn-success">

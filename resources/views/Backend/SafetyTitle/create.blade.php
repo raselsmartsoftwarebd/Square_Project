@@ -7,7 +7,7 @@
         <div class="col-sm-12">
             <div class="widget-box">
                 <div class="widget-header">
-                    <h4 class="widget-title"> Investor Details Create</h4>
+                    <h4 class="widget-title"> Safety Title Create</h4>
                     <span class="widget-toolbar">
                     </span>
                 </div>
@@ -25,14 +25,14 @@
 
 
 
-                        <form class="form-horizontal" id="companyForm" action="{{ URL::to('investordetails') }}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" id="companyForm" action="{{ URL::to('safetytitle') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
 
                             <div class="row">
                                 <div class="col-sm-12">
 
-                                   <a href="{{ URL::to('investordetails') }}" class="btn btn-info" style="float:right;margin-right:5px;">Business Details List</a>
+                                   <a href="" class="btn btn-info" style="float:right;margin-right:5px;">Safety List</a>
                                     <hr>
 
                                     <div class="form-group">
@@ -83,6 +83,7 @@
 
 
                                 </div>
+
 
 
                             </div>

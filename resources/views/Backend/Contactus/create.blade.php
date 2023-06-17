@@ -7,7 +7,7 @@
         <div class="col-sm-12">
             <div class="widget-box">
                 <div class="widget-header">
-                    <h4 class="widget-title"> Investor Details Create</h4>
+                    <h4 class="widget-title"> Contact Info Create</h4>
                     <span class="widget-toolbar">
                     </span>
                 </div>
@@ -25,14 +25,14 @@
 
 
 
-                        <form class="form-horizontal" id="companyForm" action="{{ URL::to('investordetails') }}" method="post" enctype="multipart/form-data">
+                        <form class="form-horizontal" id="companyForm" action="{{ URL::to('contactus') }}" method="post" enctype="multipart/form-data">
                             @csrf
 
 
                             <div class="row">
                                 <div class="col-sm-12">
 
-                                   <a href="{{ URL::to('investordetails') }}" class="btn btn-info" style="float:right;margin-right:5px;">Business Details List</a>
+                                   <a href="" class="btn btn-info" style="float:right;margin-right:5px;"></a>
                                     <hr>
 
                                     <div class="form-group">
@@ -48,7 +48,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="form-field-1-1">Title </label>
+                                        <label class="col-sm-3 control-label" for="form-field-1-1">Heading Title </label>
 
                                         <div class="col-xs-12 col-sm-8 ">
                                             <input type="text" class="form-control" name="title"
@@ -63,11 +63,26 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-sm-3 control-label" for="form-field-1-1">Description </label>
+                                        <label class="col-sm-3 control-label" for="form-field-1-1">Sub-Title </label>
+
+                                        <div class="col-xs-12 col-sm-8 ">
+                                            <input type="text" class="form-control" name="subtitle"
+                                                   value="" placeholder="Sub-Title">
+
+
+                                            <span class="text-danger">
+
+                                                </span>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-3 control-label" for="form-field-1-1">Details Information </label>
 
                                         <div class="col-xs-12 col-sm-8 ">
                                             <input type="text" class="form-control" name="description"
-                                                   value="" placeholder="Description">
+                                                   value="" placeholder="Details Information">
 
 
                                             <span class="text-danger">
@@ -82,7 +97,10 @@
 
 
 
+
+
                                 </div>
+
 
 
                             </div>

@@ -19,11 +19,13 @@ use App\Http\Controllers\Backend\NewsEventsController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\AboutDetailsController;
 use App\Http\Controllers\Backend\BusinessTitleController;
+use App\Http\Controllers\Backend\SafetyTitleController;
 use App\Http\Controllers\Backend\BusinessDetailsController;
 use App\Http\Controllers\Backend\InvestorTitleController;
 use App\Http\Controllers\Backend\InvestorDetailsController;
 use App\Http\Controllers\Backend\GalleryTitleController;
 use App\Http\Controllers\Backend\GalleryDetailsController;
+use App\Http\Controllers\Backend\ContactusController;
 
 
 /*
@@ -110,6 +112,10 @@ Route::post('/change_about_details_status', [AboutDetailsController::class, 'sta
 Route::resource('businesstitle', BusinessTitleController::class);
 Route::get('businesstitle/titleedit/{id}', [BusinessTitleController::class, 'titleedit']);
 
+//Responsibility SafetyTitle
+Route::resource('safetytitle', SafetyTitleController::class);
+Route::get('safetytitle/titleedit/{id}', [SafetyTitleController::class, 'titleedit']);
+
 //AboutDetails
 Route::resource('businessdetails', BusinessDetailsController::class);
 Route::post('/change_business_details_status', [BusinessDetailsController::class, 'statusChange']);
@@ -131,6 +137,10 @@ Route::get('gallerytitle/titleedit/{id}', [GalleryTitleController::class, 'title
 //GalleryDetails
 Route::resource('gallerydetails', GalleryDetailsController::class);
 Route::post('/change_gallery_details_status', [GalleryDetailsController::class, 'statusChange']);
+
+//Contactus Info
+Route::resource('contactus',ContactusController::class);
+Route::get('contactus/contactinfo/{id}', [ContactusController::class, 'contactinfo']);
 
 
 

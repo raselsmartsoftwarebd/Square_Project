@@ -242,6 +242,122 @@
     </li>
 
 
+    <!-- Responsibility Section -->
+
+
+    <li class="">
+        <a href="#" class="dropdown-toggle">
+            <i class="menu-icon fa fa-briefcase"></i>
+            <span class="menu-text">
+                Responsibility
+            </span>
+
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+
+        <b class="arrow"></b>
+
+
+        <ul class="submenu">
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-briefcase"></i>
+                    <span class="menu-text">
+                        Safety
+                    </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="{{ url('/safetytitle/titleedit/1') }}" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Title
+
+                        </a>
+
+                     </li>
+                </ul>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="{{ url('businessdetails') }}" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Details
+
+                        </a>
+
+                     </li>
+                </ul>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="{{ url('businessdetails') }}" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Image
+
+                        </a>
+
+                     </li>
+                </ul>
+
+            </li>
+        </ul>
+
+
+        <ul class="submenu">
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-briefcase"></i>
+                    <span class="menu-text">
+                        Community
+                    </span>
+
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+
+                <b class="arrow"></b>
+
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="{{ url('/businesstitle/titleedit/1') }}" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Title
+
+                        </a>
+
+                     </li>
+                </ul>
+
+                <ul class="submenu">
+                    <li class="">
+                        <a href="{{ url('businessdetails') }}" class="">
+                            <i class="menu-icon fa fa-caret-right"></i>
+
+                            Details
+
+                        </a>
+
+                     </li>
+                </ul>
+
+
+            </li>
+        </ul>
+
+    </li>
+
+
+
      <!-- Investor Section -->
 
 
@@ -263,7 +379,7 @@
                 <a href="{{ url('/investortitle/titleedit/1') }}" class="">
                     <i class="menu-icon fa fa-caret-right"></i>
 
-                    Business Title
+                    Investor Title
 
                 </a>
 
@@ -329,9 +445,37 @@
 
 
 
+    <!-- Contact Section -->
+
+
+    <li class="">
+        <a href="#" class="dropdown-toggle">
+            <i class="menu-icon glyphicon glyphicon-picture"></i>
+            <span class="menu-text">
+                Contact
+            </span>
+
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+
+        <b class="arrow"></b>
+
+
+        <ul class="submenu">
+            <li class="">
+                <a href="{{ url('/contactus/contactinfo/1') }}" class="">
+                    <i class="menu-icon fa fa-caret-right"></i>
+
+                    Contact Info
+
+                </a>
+
+             </li>
+        </ul>
 
 
 
+    </li>
 
 
 

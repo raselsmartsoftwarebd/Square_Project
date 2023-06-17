@@ -33,6 +33,8 @@ class DatabaseSeeder extends Seeder
             GalleryDetailsSeeder::class,
             CompanyListSeeder::class,
             CompanyCategorySeeder::class,
+            ContactusSeeder::class,
+            SafetyTitleSeeder::class,
         ]);
     }
 }
