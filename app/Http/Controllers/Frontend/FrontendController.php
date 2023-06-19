@@ -18,6 +18,7 @@ use App\Models\SafetyDetails;
 use App\Models\SafetyImage;
 use App\Models\CommunityTitle;
 use App\Models\CommunityDetails;
+use App\Models\Contactus;
 
 
 class FrontendController extends Controller
@@ -89,7 +90,9 @@ class FrontendController extends Controller
        // Contact
        public function contact()
        {
-           return view('Frontend.Pages.contact');
+
+           $data['contactinfo']            = Contactus::get();
+           return view('Frontend.Pages.contact', $data);
        }
 
 

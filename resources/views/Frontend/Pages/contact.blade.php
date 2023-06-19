@@ -9,17 +9,19 @@
 
 <div class="">
     <div class="col-md-12 mt-5">
+        @foreach($contactinfo as $info)
 
         <div class="contact-section">
-            <div class="contact-background-image"></div>
+            <div class="about-background-image" style="background-image: url('{{ asset('/asset/contactimage/'.$info->image) }}');">
             <div class="contact-content">
               <div class="contact-rectangle-box">
-                <h2 class="contact-title">Contact Us</h2>
+                <h2 class="contact-title">{{ $info->title }}</h2>
 
               </div>
             </div>
           </div>
 
+          @endforeach
 
     </div>
 
@@ -80,12 +82,14 @@
             <div class="col-md-4">
               <div>
                 <div class="container mt-5">
+                    @foreach($contactinfo as $info)
                   <div class="contact-sectionnn">
-                    <h1 class="contact-big-title">CONTACT INFORMATION</h1>
+
                     <div style="height: 20px;"></div>
-                    <h2 class="contact-sub-title">Contact Us</h2>
-                    <p class="contact-texttt">SQUARE Centre, 48 Bir Uttam AK Khandakar Road, Mohakhali C/A Dhaka 1212, Bangladesh</p>
+                    <h2 class="contact-sub-title">{{ $info->subtitle }}</h2>
+                    <p class="contact-texttt">{{ $info->description }}</p>
                   </div>
+                  @endforeach
                 </div>
 
               </div>

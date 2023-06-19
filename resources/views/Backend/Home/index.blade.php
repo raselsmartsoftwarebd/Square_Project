@@ -15,47 +15,46 @@
 
             <br>
 
-            <div class="col-sm-2">
-                <div class="well well-lg">
-                    <h2><i class="fa fa-list-alt green"></i> &nbsp;</h2>
-                    <strong class="text-center">10 Company</strong>
-                </div>
+            <div class="col-sm-3">
+                <a href="{{ url('companylist') }}" style="text-decoration: none;">
+                    <div class="well well-lg">
+                        <h2><i class="fa fa-list-alt green"></i> &nbsp;</h2>
+                        <strong class="text-center">{{ $countcompany }} Company</strong>
+                    </div>
+                </a>
+
             </div>
 
-            <div class="col-sm-2">
-                <div class="well well-lg">
-                    <h2><i class="fa fa-list-alt blue"></i> &nbsp; </h2>
-                    <strong class="text-center">10 Sub-Company</strong>
-                </div>
+            <div class="col-sm-3">
+                <a href="{{ url('businessdetails') }}" style="text-decoration: none;">
+                    <div class="well well-lg">
+                        <h2><i class="fa fa-list-alt green"></i> &nbsp;</h2>
+                        <strong class="text-center">{{ $countbusiness }} Brands</strong>
+                    </div>
+                </a>
             </div>
 
-            <div class="col-sm-2">
-                <div class="well well-lg">
-                    <h2><i class="fa fa-list-alt red"></i> &nbsp; </h2>
-                    <strong class="text-center">10 Brands</strong>
-                </div>
+            <div class="col-sm-3">
+                <a href="{{ url('newsevents') }}" style="text-decoration: none;">
+                    <div class="well well-lg">
+                        <h2><i class="fa fa-list-alt green"></i> &nbsp;</h2>
+                        <strong class="text-center">{{ $countnews }} News</strong>
+                    </div>
+                </a>
             </div>
 
-            <div class="col-sm-2">
-                <div class="well well-lg">
-                    <h2><i class="fa fa-list-alt orange"></i> &nbsp; </h2>
-                    <strong class="text-center">10 Events</strong>
-                </div>
+            <div class="col-sm-3">
+                <a href="{{ url('newsevents') }}" style="text-decoration: none;">
+                    <div class="well well-lg">
+                        <h2><i class="fa fa-list-alt green"></i> &nbsp;</h2>
+                        <strong class="text-center">{{ $countnews }} Events</strong>
+                    </div>
+                </a>
             </div>
 
-            <div class="col-sm-2">
-                <div class="well well-lg">
-                    <h2><i class="fa fa-list-alt purple"></i> &nbsp; </h2>
-                    <strong class="text-center">10 News</strong>
-                </div>
-            </div>
 
-            <div class="col-sm-2">
-                <div class="well well-lg">
-                    <h2><i class="fa fa-list-alt pink"></i> &nbsp;</h2>
-                    <strong class="text-center">10 Contacts</strong>
-                </div>
-            </div>
+
+
             <br>
 
         </div>

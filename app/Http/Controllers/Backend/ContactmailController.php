@@ -31,7 +31,7 @@ class ContactmailController extends Controller
             //  Send mail to admin
             $mailTo = env('MAIL_TO');
             Mail::to($mailTo)->send(new Contact($data));
-            return redirect()->back()->with('success','Your Information Send Success');
+            return redirect()->back()->with('success','Your sending information is success');
         } catch (\Throwable $th) {
             return redirect()->back()->with('error',$th->getMessage());
         }
