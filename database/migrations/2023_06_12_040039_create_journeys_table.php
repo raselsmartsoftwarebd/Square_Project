@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('maintitle')->nullable();
             $table->string('firstsubtitle')->nullable();
-            $table->string('firstdescription')->nullable();
+            $table->longtext('firstdescription')->nullable();
             $table->string('secondsubtitle')->nullable();
-            $table->string('seconddescription')->nullable();
+            $table->longtext('seconddescription')->nullable();
             $table->string('thirdsubtitle')->nullable();
-            $table->string('thirddescription')->nullable();
+            $table->longtext('thirddescription')->nullable();
             $table->string('image')->nullable();
             $table->tinyinteger('status')->default(1)->nullable();
             $table->timestamps();

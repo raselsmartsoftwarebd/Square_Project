@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('company_globals', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('leftDescription')->nullable();
-            $table->string('rightDescription')->nullable();
+            $table->longtext('leftDescription')->nullable();
+            $table->longtext('rightDescription')->nullable();
             $table->string('image')->nullable();
             $table->tinyinteger('status')->default(1)->nullable();
             $table->timestamps();

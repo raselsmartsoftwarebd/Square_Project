@@ -12,6 +12,38 @@
     padding-left: 20px;
 }
 
+@media (max-width: 992px) {
+    .logo-design {
+        max-width: 150px;
+    }
+
+    .nav-design {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-design {
+        max-width: 120px;
+    }
+
+    .nav-design {
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-design {
+        max-width: 100px;
+    }
+
+    .nav-design {
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+}
 
 /* Slideshow container */
 
@@ -629,6 +661,38 @@ img {vertical-align: middle;}
     margin-left: 10px;
     vertical-align: middle;
 }
+
+
+
+
+/* Responsive adjustments for tablets and mobile phones */
+
+@media (max-width: 767px) {
+    .columnn,
+    .align-useful-link,
+    .alignn-third-column,
+    .third-col-menu {
+      width: 100%;
+      padding: 20px; /* Increase padding for better readability */
+    }
+
+    .titlee,
+    .paragraphh,
+    .first-usefull-link,
+    .menu-itemm {
+      text-align: center; /* Center align the content */
+    }
+
+    .menu-itemm {
+      margin-top: 10px; /* Reduce the margin-top for mobile screens */
+    }
+  }
+
+  /* Responsive adjustments for screens between 500px and 800px */
+
+
+
+
 
 
 
@@ -1406,8 +1470,12 @@ color: green;
 
   .investor-title {
     color: green; /* White text color */
-    font-size: 35px;
+    font-size: 15px;
     margin: 0;
+  }
+
+  .investor-main-title{
+    font-size: 35px;
   }
 
   .investor-paragraph {

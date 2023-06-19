@@ -15,7 +15,7 @@
             <div class="investor-content">
               <div class="investor-rectangle-box">
                 @foreach ($investortitle as $investor)
-                <h2 class="investor-title">{{ $investor->title }}</h2>
+                <h2 class="investor-main-title">{{ $investor->title }}</h2>
                 @endforeach
               </div>
             </div>

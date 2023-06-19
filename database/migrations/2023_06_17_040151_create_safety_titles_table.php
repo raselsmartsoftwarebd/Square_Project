@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('safety_titles', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('description')->nullable();
+            $table->longtext('description')->nullable();
             $table->string('image')->nullable();
             $table->timestamps();
         });

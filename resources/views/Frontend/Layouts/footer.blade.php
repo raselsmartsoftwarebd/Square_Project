@@ -2,7 +2,7 @@
 
     <!....About Us....>
 
-    <div class="col-md-12 mt-5" style="height:400px;background:  #302c2c;">
+    <div class="col-md-12 mt-5 about-height" style="height:400px;background:  #302c2c;">
       <div class="container">
         <div class="row">
           <div class="col-md-12" style="height:400px;background:  #302c2c;">
