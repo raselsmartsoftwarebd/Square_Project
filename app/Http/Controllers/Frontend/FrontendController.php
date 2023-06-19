@@ -4,6 +4,21 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\About;
+use App\Models\AboutDetails;
+use App\Models\InvestorTitle;
+use App\Models\InvestorDetails;
+use App\Models\NewsEvents;
+use App\Models\GalleryTitle;
+use App\Models\GalleryDetails;
+use App\Models\BusinessTitle;
+use App\Models\BusinessDetails;
+use App\Models\SafetyTitle;
+use App\Models\SafetyDetails;
+use App\Models\SafetyImage;
+use App\Models\CommunityTitle;
+use App\Models\CommunityDetails;
+
 
 class FrontendController extends Controller
 {
@@ -12,57 +27,63 @@ class FrontendController extends Controller
     //About
     public function about()
     {
-        return view('Frontend.Pages.about');
+        $data['abouttitle']            = About::get();
+        $data['aboutdetails']            = AboutDetails::where('status', '1')->get();
+        return view('Frontend.Pages.about', $data);
     }
 
 
     //Business
     public function business()
     {
-        return view('Frontend.Pages.business');
+        $data['businesstitle']            = BusinessTitle::get();
+        $data['businessdetails']            = BusinessDetails::where('status', '1')->get();
+        return view('Frontend.Pages.business', $data);
     }
 
     //Responsibility-> Safety
     public function safety()
     {
-        return view('Frontend.Pages.Responsibility.safety');
+        $data['safetytitle']            = SafetyTitle::get();
+        $data['safetydetails']            = SafetyDetails::get();
+        $data['safetyimage']            = SafetyImage::get();
+        return view('Frontend.Pages.Responsibility.safety', $data);
     }
 
-    //Responsibility-> Environment
-    public function environment()
-    {
-        return view('Frontend.Pages.Responsibility.environment');
-    }
 
-    //Responsibility-> employee
-    public function employee()
-    {
-        return view('Frontend.Pages.Responsibility.employee');
-    }
 
     //Responsibility-> Community
     public function community()
     {
-        return view('Frontend.Pages.Responsibility.community');
+        $data['communitytitle']            = CommunityTitle::get();
+        $data['communitydetails']            = CommunityDetails::get();
+
+        return view('Frontend.Pages.Responsibility.community', $data);
     }
 
     // Investor
     public function investor()
     {
-        return view('Frontend.Pages.investor');
+        $data['investortitle']            = InvestorTitle::get();
+        $data['investordetails']            = InvestorDetails::where('status', '1')->get();
+        return view('Frontend.Pages.investor', $data);
     }
 
     // News & Media
     public function newsMedia()
     {
-        return view('Frontend.Pages.news&media');
+        $data['newsevents']            = NewsEvents::where('status', '1')->get();
+        return view('Frontend.Pages.news&media', $data);
     }
 
 
      // Gallery
      public function gallery()
      {
-         return view('Frontend.Pages.gallery');
+
+        $data['gallerytitle']            = GalleryTitle::get();
+        $data['gallerydetails']            = GalleryDetails::where('status', '1')->get();
+         return view('Frontend.Pages.gallery', $data);
      }
 
        // Contact

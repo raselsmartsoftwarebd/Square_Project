@@ -16,47 +16,21 @@
   <!....News & Events Four Column....>
 
 
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-12 mt-5">
-
-          <div class="column">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt-5">
+        <div class="row">
+          @foreach ($newsevents as $events)
+          <div class="col-md-3">
             <div class="image">
-                <img src="{{ asset('/frontend/asset/') }}/images/solar.jpg" alt="Image 1" width="100%">
-                <div class="button"><i class="fa-duotone fa-plus icon-bold"></i></div>
+              <img src="{{ asset('/asset/eventsimage/'.$events->image) }}" alt="Image 1" width="100%">
+              <div class="button"><i class="fa-duotone fa-plus icon-bold"></i></div>
             </div>
-            <div class="title">June 12, 2020</div>
-            <div class="paragraph">HSBC arranges countrys first sustainability linked loan for Square Group</div>
+            <div class="title">{{ $events->updated_at }}</div>
+            <div class="paragraph">{{ $events->description }}</div>
+          </div>
+          @endforeach
         </div>
-
-        <div class="column">
-            <div class="image">
-                <img src="{{ asset('/frontend/asset/') }}/images/meeting.jpg" alt="Image 2" width="100%">
-                <div class="button"><i class="fa-duotone fa-plus icon-bold"></i></div>
-            </div>
-            <div class="title">Dec 14, 2012</div>
-            <div class="paragraph">BELARUS to import drugs from SQUARE</div>
-        </div>
-
-        <div class="column">
-            <div class="image">
-                <img src="{{ asset('/frontend/asset/') }}/images/men.jpg" alt="Image 3" width="100%">
-                <div class="button"><i class="fa-duotone fa-plus icon-bold"></i></div>
-            </div>
-            <div class="title">Apr 06, 2020</div>
-            <div class="paragraph">A Prescription to Success</div>
-        </div>
-
-        <div class="column">
-            <div class="image">
-                <img src="{{ asset('/frontend/asset/') }}/images/flower.jpg" alt="Image 4" width="100%">
-                <div class="button"><i class="fa-duotone fa-plus icon-bold"></i></div>
-            </div>
-            <div class="title">June 9, 2020</div>
-            <div class="paragraph">My call to the people of this country is to stand by each other in this day of danger</div>
-        </div>
-        </div>
-
       </div>
     </div>
+  </div>

@@ -4,6 +4,10 @@
 
       <div class="col-md-12 team-cover-image mt-5">
 
+        @foreach ($companyteam as $team)
+        <div class="team-cover-image" style="background-image: url('{{ asset('/asset/teamimage/'.$team->image) }}');">
+        @endforeach
+
         <div class="row">
           <div class="col-md-6 mt-5">
 
@@ -13,10 +17,12 @@
                 <div class="contain">
                   <div class="border-line"></div>
                   <div class="content">
-                    <h1 class="headline">Our Team </h1>
-                    <p class="subtext">Respect for people, diversity and equal opportunity are integral to our team dynamics and leadership for creating a winning culture.
+                    @foreach ($companyteam as $team)
+                    <h1 class="headline">{{ $team->title }} </h1>
+                    <p class="subtext">{{ $team->description }}
 
                     </p>
+                    @endforeach
                   </div>
                 </div>
 
@@ -35,3 +41,4 @@
     </div>
 
   </div>
+</div>

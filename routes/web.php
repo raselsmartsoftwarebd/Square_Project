@@ -30,6 +30,7 @@ use App\Http\Controllers\Backend\InvestorDetailsController;
 use App\Http\Controllers\Backend\GalleryTitleController;
 use App\Http\Controllers\Backend\GalleryDetailsController;
 use App\Http\Controllers\Backend\ContactusController;
+use App\Http\Controllers\Backend\ContactmailController;
 
 
 /*
@@ -130,7 +131,7 @@ Route::get('safetyimage/imageedit/{id}', [SafetyImageController::class, 'imageed
 
 //Responsibility CommunityTitle
 Route::resource('communitytitle', CommunityTitleController::class);
-Route::get('communitytitle/titleedit/{id}', [SafetyTitleController::class, 'titleedit']);
+Route::get('communitytitle/titleedit/{id}', [CommunityTitleController::class, 'titleedit']);
 
 //Responsibility CommunityDetails
 Route::resource('communitydetails', CommunityDetailsController::class);
@@ -162,6 +163,9 @@ Route::post('/change_gallery_details_status', [GalleryDetailsController::class, 
 //Contactus Info
 Route::resource('contactus',ContactusController::class);
 Route::get('contactus/contactinfo/{id}', [ContactusController::class, 'contactinfo']);
+
+//contactmail
+Route::post('/contact/mail', [ContactmailController::class, 'contactmail']);
 
 
 

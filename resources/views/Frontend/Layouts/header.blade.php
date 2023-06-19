@@ -2,7 +2,9 @@
     <div class="col-md-12 total-nav">
         <div class="row ">
             <div class="col-md-2 ">
-                <img class="logo-design" src="{{ asset('/frontend/asset/') }}/images/logo.jpg" alt="logo"/>
+                @foreach($companyinfo as $info)
+                <img class="logo-design" src="{{ asset('/avatar/'.$info->logo) }}" alt="logo"/>
+                @endforeach
             </div>
             <div class="col-md-10 total-nav !important">
 

@@ -8,16 +8,20 @@
         @endforeach
 
         <div>
-          <h1 class="global-heading" >Global Reach</h1>
+            @foreach ($companyglobal as $comglobal)
+            <h1 class="global-heading" >{{ $comglobal->title }}</h1>
+            @endforeach
          </div>
         <div class="row">
           <div class="col-md-6 mt-5">
-            <h1 class="sixty-number">60+</h1>
-            <p class="export-heading" >Export Countries</p>
+            @foreach ($companyglobal as $comglobal)
+            <p class="export-heading" >{{ $comglobal->leftDescription }}</p>
+            @endforeach
           </div>
           <div class="col-md-6 mt-5">
-            <h1 class="sixty-thousand-heading">60,000+</h1>
-            <p class="employee-heading">Total Employee</p>
+            @foreach ($companyglobal as $comglobal)
+            <p class="employee-heading">{{ $comglobal->rightDescription }}</p>
+            @endforeach
           </div>
         </div>
       </div>

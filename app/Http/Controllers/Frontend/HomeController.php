@@ -10,6 +10,7 @@ use App\Models\Journey;
 use App\Models\CompanyGlobal;
 use App\Models\CompanyTeam;
 use App\Models\NewsEvents;
+use App\Models\Company;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,14 @@ class HomeController extends Controller
         $data['companyglobal']            = CompanyGlobal::get();
         $data['companyteam']            = CompanyTeam::get();
         $data['newsevents']            = NewsEvents::where('status', '1')->get();
+
         return view('Frontend.Home.index', $data);
+    }
+
+    public function headercontroller()
+    {
+        // $companyinfo = Company::get(); used app service provider
+       // return view('Frontend.Layouts.header', compact('companyinfo'));
+
     }
 }

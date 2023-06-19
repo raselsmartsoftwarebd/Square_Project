@@ -5,11 +5,9 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\InvestorDetails;
-use App\Traits\FileSaver;
 
 class InvestorDetailsController extends Controller
 {
-    use FileSaver;
     /**
      * Display a listing of the resource.
      *
@@ -37,10 +35,20 @@ class InvestorDetailsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request , $id=null)
+    public function store(Request $request)
     {
-        $this->storeOrUpdate($request);
+        if($request->file('image')){
+            $name = time(). '.' .$request->image->extension();
+            $request->image->move(public_path('/asset/investorimage/'), $name);
+        }
+
+        $investordetails = new InvestorDetails();
+        $investordetails->title = $request->title;
+        $investordetails->description = $request->description;
+        $investordetails->image = $name;
+        $investordetails->save();
         return redirect()->to('/investordetails')->with('success','Insert Successfull');
+
 
 
     }
@@ -77,7 +85,21 @@ class InvestorDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->storeOrUpdate($request, $id);
+        $investordetails = InvestorDetails::find($id);
+
+        if(isset($request->image)){
+            if($investordetails->image && file_exists('asset/investorimage/'.$investordetails->image)){
+                unlink('asset/investorimage/'.$investordetails->image );
+            }
+            $updateImage = time(). '.' .$request->image->extension();
+            $request->image->move(public_path('/asset/investorimage/'),$updateImage);
+            $investordetails->image = $updateImage;
+
+        }
+
+        $investordetails->title = $request->title;
+        $investordetails->description = $request->description;
+        $investordetails->save();
         return redirect()->to('/investordetails')->with('success','Update Successfull');
     }
 
@@ -106,22 +128,5 @@ class InvestorDetailsController extends Controller
             InvestorDetails::where("id", "=", $slider_id)->update(["status"=>1]);
         }
         return $slider_id;
-    }
-
-    public function storeOrUpdate(Request $request, $id = null){
-
-        $investordetails = InvestorDetails::updateOrCreate([
-            'id'                => $id,
-        ], [
-            'title'             => $request->title,
-            'description'       => $request->description,
-            'status'            => 1,
-        ]);
-
-        if ($request->hasFile('image')) {
-            $file = $request->file('image');
-            $this->upload_file($file, $investordetails, 'image', 'asset/investorimage');
-        }
-
     }
 }
