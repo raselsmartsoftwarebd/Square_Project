@@ -5,7 +5,7 @@
 <main class="app-content">
     <div class="app-title">
         <div>
-            <h1><i class="fa fa-edit"></i>Manage Business Details</h1>
+            <h1><i class="fa fa-edit"></i>Manage Admin Panel</h1>
 
         </div>
         <ul class="app-breadcrumb breadcrumb">
@@ -23,30 +23,29 @@
 
 
             <div class="tile table-responsive">
-                <a href="{{ URL::to('businessdetails/create') }}"class="btn btn-info" style="float: right;margin-bottom:5px;margin-left:-5px;">Add New</a>
+                <a href="{{ URL::to('admincreate/create') }}"class="btn btn-info" style="float: right;margin-bottom:5px;margin-left:-5px;">Add Admin</a>
                 <table class="table table-bordered">
                      <tr>
                         <th>SL</th>
 
-                        <th>Title</th>
 
-                        <th>Description</th>
-                        <th>Image</th>
+
+                        <th>Name</th>
+                        <th>Email</th>
                         <th>Action</th>
 
                      </tr>
-                     @foreach ($businessdetails as $details)
+                     @foreach ($admindetails as $details)
                         <tr>
                             <td>{{ $loop->index+1 }}</td>
 
-                            <td>{{ $details->title }}</td>
 
-                            <td>{{ $details->description }}</td>
+                            <td>{{ $details->name }}</td>
+
+                            <td>{{ $details->email }}</td>
 
 
-                            <td>
-                                <img src="{{ asset('/asset/businessimage/'.$details->image) }}" height="80" width="80"/>
-                            </td>
+
 
                             <td>
 
@@ -54,7 +53,7 @@
                                     <input name="switch-field-1"
                                         data-id="{{$details->id}}" onclick="statusChange(this)"
                                         class="ace ace-switch ace-switch-6" type="checkbox"
-                                        {{ status($details->status) }} />
+                                        {{ status($details->is_admin) }} />
                                     <span class="lbl"></span>
                                 </label>
 
@@ -64,10 +63,10 @@
 
                                 <div class="edit-delete-container">
                                     <div class="edit-delete-left-section">
-                                        <a href="{{ URL::to('businessdetails/'.$details->id.'/edit') }}" class="btn btn-sm btn-info edit-button"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
+                                        <a href="{{ URL::to('admincreate/'.$details->id.'/edit') }}" class="btn btn-sm btn-info edit-button"><i class="ace-icon fa fa-pencil bigger-120"></i></a>
                                     </div>
                                     <div class="edit-delete-right-section">
-                                        <form action="{{ url('businessdetails/'.$details->id) }}" method="post">
+                                        <form action="{{ url('admincreate/'.$details->id) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" onclick="return confirm('Are you sure?')" class="btn btn-sm btn-danger edit-button"><i class="ace-icon fa fa-trash-o bigger-120"></i></button>
@@ -88,7 +87,7 @@
 <script>
     function statusChange(element) {
         let slider_id = $(element).attr("data-id");
-        let post_url = "/change_business_details_status";
+        let post_url = "/change_admin_details_status";
         let allData = new FormData();
         allData.append("ID", slider_id);
         let configuration = {headers:{"content-type" : "multipart/form-data"},

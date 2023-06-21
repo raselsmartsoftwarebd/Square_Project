@@ -31,6 +31,8 @@ use App\Http\Controllers\Backend\GalleryTitleController;
 use App\Http\Controllers\Backend\GalleryDetailsController;
 use App\Http\Controllers\Backend\ContactusController;
 use App\Http\Controllers\Backend\ContactmailController;
+use App\Http\Controllers\Backend\AdminCreateController;
+
 
 
 /*
@@ -65,10 +67,17 @@ Route::get('/contact', [FrontendController::class, 'contact']);
 
 
 
+
+
+
+Auth::routes();
+Route::group(['middleware'=> 'auth'], function () {
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admindashboard'])->name('Backend.Home.index')->middleware('is_admin');
 //Backend
 
 //Admin Dashboard Controller Routes
-Route::get('/admin/dashboard', [AdminController::class, 'index']);
+//Route::get('/admin/dashboard', [AdminController::class, 'index']);
 
 //Companyinfo Controller
 Route::resource('company', CompanyinfoController::class);
@@ -79,10 +88,10 @@ Route::resource('companylist', CompanyListController::class);
 //CompanyCategory Controller
 Route::resource('companycategory', CompanyCategoryController::class);
 
+
 //SliderController Routes
 Route::resource('sliders', SlidersController::class);
 Route::post('/change_status', [SlidersController::class, 'statusChange']); //Slider status change routes
-
 
 //CompanyExcellence Routes
 Route::resource('companyexcellence', CompanyExcellenceController::class);
@@ -169,21 +178,11 @@ Route::post('/contact/mail', [ContactmailController::class, 'contactmail']);
 
 
 
+//AdminCreate
+Route::resource('admincreate', AdminCreateController::class);
 
+//AdminStatus
+Route::post('/change_admin_details_status', [AdminCreateController::class, 'statusChange']);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 

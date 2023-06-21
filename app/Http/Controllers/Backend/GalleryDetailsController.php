@@ -94,7 +94,6 @@ class GalleryDetailsController extends Controller
 
         }
 
-
         $gallerydetails->description = $request->description;
         $gallerydetails->save();
         return redirect()->to('/gallerydetails')->with('success','Update Successfull');

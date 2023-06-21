@@ -270,34 +270,25 @@
                     <img class="nav-user-photo" src="{{ asset('/backend/asset/') }}/assets/images/avatars/user.jpg" alt="Jason's Photo" />
                     <span class="user-info">
                         <small>Welcome,</small>
-                        Jason
+                        Admin
                     </span>
 
                     <i class="ace-icon fa fa-caret-down"></i>
                 </a>
 
                 <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-                    <li>
-                        <a href="#">
-                            <i class="ace-icon fa fa-cog"></i>
-                            Settings
-                        </a>
-                    </li>
+
 
                     <li>
-                        <a href="profile.html">
-                            <i class="ace-icon fa fa-user"></i>
-                            Profile
-                        </a>
-                    </li>
-
-                    <li class="divider"></li>
-
-                    <li>
-                        <a href="#">
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
                             <i class="ace-icon fa fa-power-off"></i>
                             Logout
                         </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </li>

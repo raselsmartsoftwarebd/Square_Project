@@ -58,6 +58,18 @@
              </li>
         </ul>
 
+        <ul class="submenu">
+            <li class="">
+                <a href="{{ URL::to('admincreate') }}" class="">
+                    <i class="menu-icon fa fa-caret-right"></i>
+
+                    Manage Admin
+
+                </a>
+
+             </li>
+        </ul>
+
     </li>
 
 
