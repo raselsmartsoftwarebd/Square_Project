@@ -12,24 +12,23 @@ class AdminController extends Controller
     public function index()
     {
 
-      //  $gallerycount = DB::table('GalleryDetails')->count();
+    //    $gallerycount = DB::table('GalleryDetails')->count();
 
 
-       // return view('Backend.Home.index', $gallerycount);
+    //    return view('Backend.Home.index', $gallerycount);
 
 
+    //     $countcompany = DB::table('company_lists')->count();
+    //     $countbusiness = DB::table('business_details')->count();
+    //     $countnews = DB::table('news_events')->count();
 
-        $countcompany = DB::table('company_lists')->count();
-        $countbusiness = DB::table('business_details')->count();
-        $countnews = DB::table('news_events')->count();
 
+    //     return view('Backend.Home.index')->with([
+    //         'countcompany' => $countcompany,
+    //         'countbusiness' => $countbusiness,
+    //         'countnews' => $countnews,
 
-        return view('Backend.Home.index')->with([
-            'countcompany' => $countcompany,
-            'countbusiness' => $countbusiness,
-            'countnews' => $countnews,
-
-        ]);
+    //     ]);
 
     }
 }
