@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\Company;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -14,7 +16,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $countcompany = DB::table('company_lists')->count();
+        $countbusiness = DB::table('business_details')->count();
+        $countnews = DB::table('news_events')->count();
+
+        View::share([
+            'countcompany' => $countcompany,
+            'countbusiness' => $countbusiness,
+            'countnews' => $countnews,
+        ]);
     }
 
     /**
@@ -29,4 +39,6 @@ class AppServiceProvider extends ServiceProvider
 
         });
     }
+
+
 }
