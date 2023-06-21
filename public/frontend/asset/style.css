@@ -1,55 +1,4 @@
-/*......Top Bar.........*/
-.top-menu{
-    background-color: black;
-    height:30px;
-}
 
-.top-menu-sec-one{
-    color:white;
-    padding:5px;
-}
-
-.top-menu-call-email{
-    padding:5px;
-}
-
-.top-menu-sec-two{
-    color:white;
-    padding:5px;
-    text-align: center;
-    padding-left: 170px;
-}
-
-.top-menu-about-contact-order{
-    padding:10px;
-    text-decoration: none;
-    color:white;
-}
-
-.top-menu-about-contact-order:hover{
-    color:red;
-    transition:0.5s;
-}
-
-.top-menu-sec-three{
-    color:white;
-    padding:5px;
-    text-align: center;
-    font-size: 20px;
-    float:right;
-}
-
-.top-menu-icons{
-    padding:20px;
-    text-decoration: none;
-    color:white;
-
-}
-
-.top-menu-icons:hover{
-    color:red;
-    transition: 0.5s;
-}
 
 
 /* Meny Bar*/
@@ -1866,50 +1815,7 @@ font-size: 30px;
 
 
 
-/*For login*/
-.container {
-    margin-top: 50px;
-}
 
-.card-header {
-    font-weight: bold;
-}
-
-.card-body {
-    padding: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.col-md-4 {
-    text-align: right;
-}
-
-.btn-primary {
-    margin-top: 10px;
-}
-
-.btn-link {
-    text-decoration: underline;
-    font-size: 0.9rem;
-}
-
-@media (max-width: 768px) {
-    .card-header, .col-md-4 {
-        text-align: center;
-    }
-
-    .form-group.row {
-        flex-direction: column;
-    }
-
-    .col-md-6.offset-md-4 {
-        margin-top: 10px;
-        margin-left: 0;
-    }
-}
 
 
 

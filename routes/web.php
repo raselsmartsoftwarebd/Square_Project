@@ -65,6 +65,8 @@ Route::get('/news/media', [FrontendController::class, 'newsMedia']);
 Route::get('/gallery', [FrontendController::class, 'gallery']);
 Route::get('/contact', [FrontendController::class, 'contact']);
 
+//contactmail
+Route::post('/contact/mail', [ContactmailController::class, 'contactmail']);
 
 
 
@@ -173,8 +175,6 @@ Route::post('/change_gallery_details_status', [GalleryDetailsController::class, 
 Route::resource('contactus',ContactusController::class);
 Route::get('contactus/contactinfo/{id}', [ContactusController::class, 'contactinfo']);
 
-//contactmail
-Route::post('/contact/mail', [ContactmailController::class, 'contactmail']);
 
 
 
